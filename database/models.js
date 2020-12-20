@@ -1,5 +1,3 @@
-// Since this is not a DB review, models are written for you
-
 const db = require('./');
 
 const models = {

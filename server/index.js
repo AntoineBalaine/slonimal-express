@@ -15,7 +15,10 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 
-// Router is another type of middleware, and we tell Express to use it for '/' routes
+// Router is another type of middleware, and here we tell Express to use it for '/' routes
+// (Since we're just using '/' here, we could omit the first argument)
+// This will act as the base route for anything going through 'router'
+// If, for instance, you use '/api' instead of just '/', all the routes 'router' uses will start with '/api'
 app.use('/', router);
 
 // Start the server
